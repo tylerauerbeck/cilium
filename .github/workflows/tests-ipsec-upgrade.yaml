@@ -2,6 +2,7 @@ name: Cilium IPsec upgrade (ci-ipsec-upgrade)
 
 # Any change in triggers needs to be reflected in the concurrency group.
 on:
+  push:
   workflow_dispatch:
     inputs:
       PR-number:
@@ -428,7 +429,7 @@ jobs:
         uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808 # v4.3.3
         with:
           name: cilium-junits-${{ matrix.config }}-${{ matrix.mode }}
-          path: cilium-junits/*.xml
+          path: cilium-junits*.xml
 
       - name: Publish Test Results As GitHub Summary
         if: ${{ steps.vars.outputs.downgrade_version != '' && always() }}
