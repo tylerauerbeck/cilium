@@ -221,7 +221,7 @@ func TestL3n4AddrID_Strings(t *testing.T) {
 				},
 				ID: 1,
 			},
-			string:             "1.1.1.1:9876",
+			string:             "1.1.1.1:9876/NONE",
 			stringWithProtocol: "1.1.1.1:9876/NONE",
 		},
 		{
@@ -237,7 +237,7 @@ func TestL3n4AddrID_Strings(t *testing.T) {
 				},
 				ID: 1,
 			},
-			string:             "2.2.2.2:9876",
+			string:             "2.2.2.2:9876/TCP",
 			stringWithProtocol: "2.2.2.2:9876/TCP",
 		},
 		{
@@ -253,7 +253,7 @@ func TestL3n4AddrID_Strings(t *testing.T) {
 				},
 				ID: 1,
 			},
-			string:             "3.3.3.3:9876/i",
+			string:             "3.3.3.3:9876/UDP/i",
 			stringWithProtocol: "3.3.3.3:9876/UDP/i",
 		},
 		{
@@ -268,7 +268,7 @@ func TestL3n4AddrID_Strings(t *testing.T) {
 				},
 				ID: 1,
 			},
-			string:             "4.4.4.4:9876",
+			string:             "4.4.4.4:9876/SCTP",
 			stringWithProtocol: "4.4.4.4:9876/SCTP",
 		},
 		{
@@ -283,7 +283,7 @@ func TestL3n4AddrID_Strings(t *testing.T) {
 				},
 				ID: 1,
 			},
-			string:             "[1020:3040:5060:7080:90a0:b0c0:d0e0:f000]:9876",
+			string:             "[1020:3040:5060:7080:90a0:b0c0:d0e0:f000]:9876/NONE",
 			stringWithProtocol: "[1020:3040:5060:7080:90a0:b0c0:d0e0:f000]:9876/NONE",
 		},
 		{
@@ -299,7 +299,7 @@ func TestL3n4AddrID_Strings(t *testing.T) {
 				},
 				ID: 1,
 			},
-			string:             "[1020:3040:5060:7080:90a0:b0c0:d0e0:f000]:9876",
+			string:             "[1020:3040:5060:7080:90a0:b0c0:d0e0:f000]:9876/TCP",
 			stringWithProtocol: "[1020:3040:5060:7080:90a0:b0c0:d0e0:f000]:9876/TCP",
 		},
 		{
@@ -315,7 +315,7 @@ func TestL3n4AddrID_Strings(t *testing.T) {
 				},
 				ID: 1,
 			},
-			string:             "[1020:3040:5060:7080:90a0:b0c0:d0e0:f000]:9876/i",
+			string:             "[1020:3040:5060:7080:90a0:b0c0:d0e0:f000]:9876/UDP/i",
 			stringWithProtocol: "[1020:3040:5060:7080:90a0:b0c0:d0e0:f000]:9876/UDP/i",
 		},
 		{
@@ -330,7 +330,7 @@ func TestL3n4AddrID_Strings(t *testing.T) {
 				},
 				ID: 1,
 			},
-			string:             "[1020:3040:5060:7080:90a0:b0c0:d0e0:f000]:9876",
+			string:             "[1020:3040:5060:7080:90a0:b0c0:d0e0:f000]:9876/SCTP",
 			stringWithProtocol: "[1020:3040:5060:7080:90a0:b0c0:d0e0:f000]:9876/SCTP",
 		},
 	}
