@@ -57,6 +57,8 @@ Prerequisites
 
 .. include:: installation.rst
 
+.. include:: ingress-reference.rst
+
 Supported Ingress Annotations
 #############################
 
