@@ -1055,7 +1055,7 @@ func (e *Endpoint) deleteMaps() []error {
 // local conntrack table or the global conntrack table.
 //
 // The endpoint lock must be held
-func (e *Endpoint) garbageCollectConntrack(filter *ctmap.GCFilter) {
+func (e *Endpoint) garbageCollectConntrack(filter ctmap.GCFilter) {
 	var maps []*ctmap.Map
 
 	if e.ConntrackLocalLocked() {
@@ -1081,7 +1081,7 @@ func (e *Endpoint) garbageCollectConntrack(filter *ctmap.GCFilter) {
 }
 
 func (e *Endpoint) scrubIPsInConntrackTableLocked() {
-	e.garbageCollectConntrack(&ctmap.GCFilter{
+	e.garbageCollectConntrack(ctmap.GCFilter{
 		MatchIPs: map[netip.Addr]struct{}{
 			e.IPv4: {},
 			e.IPv6: {},
